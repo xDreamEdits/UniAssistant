@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">UniAssistant</string>
+    <string name="create_a_new_timetable">Create a new timetable</string>
+    <string name="edit_a_timetable">Edit a timetable</string>
+    <string name="delete_a_timetable">Delete a timetable</string>
+    <string name="welcome">Welcome</string>
+    <string name="to">To</string>
+    <string name="uniassistant">UniAssistant</string>
+    <string name="press_to_continue">Press to Continue</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="view_timetable">View Timetable</string>
+    <string name="timetable_options">Timetable Options</string>
+    <string name="reminders">Reminders</string>
+    <string name="home">Home</string>
+    <string name="module_name">Module Name</string>
+    <string name="module_code">Module Code</string>
+    <string name="lecturer">Lecturer</string>
+    <string name="building">Building</string>
+    <string name="time_start">Time Start</string>
+    <string name="time_finish">Time Finish</string>
+    <string name="add_lesson">Add Lesson</string>
+    <string name="day">Day</string>
+    <string name="show_reminders">Show Reminders</string>
+    <string name="add_a_reminder">Add a Reminder</string>
+    <string name="delete_reminders">Delete Reminders</string>
+</resources>
