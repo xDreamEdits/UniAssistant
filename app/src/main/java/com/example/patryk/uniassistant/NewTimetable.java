@@ -1,6 +1,9 @@
 package com.example.patryk.uniassistant;
 
+import android.app.Dialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +25,7 @@ public class NewTimetable extends AppCompatActivity {
                     }
                 }
         );
+
 
      //   Button Time_Start_Input_Button = (Button) findViewById(R.id.Time_Start_Input_Button);
 
