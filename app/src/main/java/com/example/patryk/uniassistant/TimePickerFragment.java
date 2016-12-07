@@ -26,5 +26,6 @@ public class TimePickerFragment extends DialogFragment
 
     public void onTimeSet(TimePicker view , int hourOfDay, int min){
         Log.d("Do something","when time set");
+        //NewReminder.time = String.valueOf(hourOfDay) + " " + String.valueOf(min);
     }
 }

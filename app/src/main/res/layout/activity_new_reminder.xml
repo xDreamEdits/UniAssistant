@@ -46,24 +46,20 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
 
-            <TimePicker
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/timePicker"
-                android:layout_gravity="center_horizontal" />
-
-            <DatePicker
-                android:layout_height="wrap_content"
-                android:id="@+id/datePicker"
+            <Button
+                android:text="Select Time"
                 android:layout_width="match_parent"
-                android:paddingTop="20dp"
-                android:paddingLeft="15dp" />
+                android:layout_height="wrap_content"
+                android:id="@+id/ReminderTimeButton"
+                android:onClick="showTimePickerDialog"/>
 
             <Button
                 android:text="Save Reminder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/Save_Reminder_Button" />
+                android:id="@+id/Save_Reminder_Button"/>
+
+
 
         </LinearLayout>
     </ScrollView>
