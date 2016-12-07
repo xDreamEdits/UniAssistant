@@ -33,14 +33,6 @@ public class MenuActivity extends AppCompatActivity {
                 }
         );
 
-        Button TimetableOpt_Button = (Button) findViewById(R.id.TimetableOpt_Button);
 
-        TimetableOpt_Button.setOnClickListener(
-                new Button.OnClickListener(){
-                    public void onClick(View v){
-                        startActivity(new Intent(MenuActivity.this, TimetableOptions.class));
-                    }
-                }
-        );
     }
 }

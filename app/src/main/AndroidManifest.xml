@@ -16,9 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity" />
-        <activity android:name=".TimetableOptions" />
         <activity android:name=".Reminders" />
-        <activity android:name=".NewTimetable" />
         <activity android:name=".NewReminder" />
         <activity android:name=".ShowReminders"></activity>
     </application>

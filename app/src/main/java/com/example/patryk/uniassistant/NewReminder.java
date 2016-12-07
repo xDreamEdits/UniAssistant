@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.view.View;
 import android.widget.TimePicker;
+import android.widget.DatePicker;
+import android.widget.EditText;
 
 public class NewReminder extends AppCompatActivity {
 
@@ -32,5 +34,18 @@ public class NewReminder extends AppCompatActivity {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
     }
+
+    EditText inputTxt1 = (EditText) popupView.findViewById(R.id.ReminderTitleInput);
+    String Title = inputTxt1.getText().toString();
+
+    EditText inputTxt2 = (EditText) popupView.findViewById(R.id.ReminderTextInput);
+    String reminder = inputTxt2.getText().toString();
+
+    //int hour = timePicker.getCurrentHour();
+    //int min = timePicker.getCurrentMinute();
+    //int time = hour,min;
+
+    EditText inputTxt3 = (EditText) popupView.findViewById(R.id.DateTextInput);
+    String date = inputTxt3 = inputTxt3.getText().toString();
 
 }
