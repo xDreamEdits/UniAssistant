@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-    public void save(View v){
-        ArrayList<Reminder> reminders = new ArrayList<>();
-        File file = new File();
-        for (reminder in reminders){
-            file.write(reminder);
-        }
-    }
+    //public void save(View v){
+        //ArrayList<Reminder> reminders = new ArrayList<>();
+        //File file = new File();
+        //for (reminder in reminders){
+            //file.write(reminder);
+        //}
+    //}
 
 }
