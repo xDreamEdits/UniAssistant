@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -23,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+    public void save(View v){
+        ArrayList<Reminder> reminders = new ArrayList<>();
+        File file = new File();
+        for (reminder in reminders){
+            file.write(reminder);
+        }
     }
 
 }

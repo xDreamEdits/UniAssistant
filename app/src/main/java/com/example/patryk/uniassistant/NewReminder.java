@@ -20,6 +20,11 @@ public class NewReminder extends AppCompatActivity {
         setContentView(R.layout.activity_new_reminder);
 
         Button Save_Reminder_Button = (Button) findViewById(R.id.Save_Reminder_Button);
+        EditText inputTxt1 = (EditText) findViewById(R.id.ReminderTitleInput);
+        String Title = inputTxt1.getText().toString();
+
+        EditText inputTxt2 = (EditText) findViewById(R.id.ReminderTextInput);
+        String reminder = inputTxt2.getText().toString();
 
         Save_Reminder_Button.setOnClickListener(
                 new Button.OnClickListener(){
@@ -35,11 +40,7 @@ public class NewReminder extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(), "timePicker");
     }
 
-    EditText inputTxt1 = (EditText) popupView.findViewById(R.id.ReminderTitleInput);
-    String Title = inputTxt1.getText().toString();
 
-    EditText inputTxt2 = (EditText) popupView.findViewById(R.id.ReminderTextInput);
-    String reminder = inputTxt2.getText().toString();
 
     //int hour = timePicker.getCurrentHour();
     //int min = timePicker.getCurrentMinute();
