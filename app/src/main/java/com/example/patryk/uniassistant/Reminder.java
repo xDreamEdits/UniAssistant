@@ -15,7 +15,8 @@ public class Reminder {
 
     public Reminder(String reminderTitle, String reminderText, String reminderTime, String reminderDate){
 
-        this.reminderTitle = Title;
+        NewReminder rem = new NewReminder("")
+        this.reminderTitle = (NewReminderTitle);
         this.reminderText = Text;
         this.reminderTime = Time;
         this.reminderTime = Date;
