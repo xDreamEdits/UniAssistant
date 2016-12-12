@@ -14,31 +14,50 @@ public class NewReminder extends AppCompatActivity {
 
     public static String time;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_reminder);
+
+        final EditText title = (EditText)findViewById(R.id.ReminderTitleInput);
+        final EditText text = (EditText)findViewById(R.id.ReminderTextInput);
+        final EditText date = (EditText)findViewById(R.id.DateTextInput);
 
         Button Save_Reminder_Button = (Button) findViewById(R.id.Save_Reminder_Button);
 
         Save_Reminder_Button.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View v){
-                       startActivity(new Intent(NewReminder.this, MainActivity.class));
+                        setContentView(R.layout.activity_new_reminder);
+
+
+                        String Title = title.getText().toString();
+
+                        String Text = text.getText().toString();
+
+                        String Date = date.getText().toString();
+
+                        Intent intent = new Intent(NewReminder.this, Reminder.class);
+                        intent.putExtra("Title", Title);
+                        intent.putExtra("Text", Text);
+                        intent.putExtra("Date", Date);
+
+                        Reminder x = new Reminder();
+                        x.getReminderTitle();
+
+
+                        startActivity(new Intent(NewReminder.this, MainActivity.class));
                     }
                 }
         );
 
 
-        EditText title = (EditText)findViewById(R.id.ReminderTitleInput);
-        String Title = title.getText().toString();
+    }
 
+    public String getTime(){
 
-        EditText text = (EditText)findViewById(R.id.ReminderTextInput);
-        String Text = text.getText().toString();
-
-        EditText date = (EditText)findViewById(R.id.DateTextInput);
-        String Date = date.getText().toString();
+        return "abs";
     }
 
     public void showTimePickerDialog(View v) {

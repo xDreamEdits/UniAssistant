@@ -1,48 +1,50 @@
 package com.example.patryk.uniassistant;
 
+import android.os.Bundle;
 import android.widget.EditText;
-
 /**
  * Created by Patryk on 08/12/2016.
  */
 
-public class Reminder {
+public class Reminder extends NewReminder {
 
     private String reminderTitle;
     private String reminderText;
     private String reminderTime;
     private String reminderDate;
 
-    public Reminder(String reminderTitle, String reminderText, String reminderTime, String reminderDate){
+    NewReminder rem = new NewReminder();
 
-        NewReminder rem = new NewReminder("")
-        this.reminderTitle = (NewReminderTitle);
-        this.reminderText = Text;
-        this.reminderTime = Time;
-        this.reminderTime = Date;
+ /*   public Reminder(String reminderTitle, String reminderText, String reminderTime, String reminderDate){
+        this.reminderTitle = reminderTitle;
+        this.reminderText = reminderText;
+        this.reminderTime = reminderTime;
+        this.reminderDate = reminderDate;
 
-    }
+
+    }*/
 
     public String getReminderTitle(){
-        //EditText title = (EditText)findViewById(R.id.ReminderTitleInput);
-        //String Title = title.getText().toString();
-        return Title;
+        Bundle extras = getIntent().getExtras();
+        String Title = extras.getString("Title");
+        System.out.println(Title);
+        return extras.getString("Title");
     }
 
     public String getReminderText(){
-        //EditText text = (EditText)findViewById(R.id.ReminderTextInput);
-        //String Text = text.getText().toString();
-        return Text;
+
+        return "a";
     }
 
-    //public String getReminderTime(){
-        //return reminderTime;
-    //}
+    public String getReminderTime(){
+        return "a";
+    }
 
     public String getReminderDate(){
-        //EditText date = (EditText)findViewById(R.id.DateTextInput);
-        //String Date = date.getText().toString();
-        return Date;
+        //String Date = rem.getDate();
+        return "a";
     }
+
+
 
 }
