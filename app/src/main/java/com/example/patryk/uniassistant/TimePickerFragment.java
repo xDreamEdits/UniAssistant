@@ -28,6 +28,6 @@ public class TimePickerFragment extends DialogFragment
         //int hour1 = TimePicker.getCurrentHour();
         //int min1 = TimePicker.getCurrentMinute();
         //int time = String.valueOf(hour).toString() + ":" + String.valueOf(min).toString();
-        NewReminder.time = String.valueOf(hourOfDay) + " " + String.valueOf(min);
+        NewReminder.time = String.valueOf(hourOfDay) + ":" + String.valueOf(min);
     }
 }

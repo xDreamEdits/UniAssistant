@@ -1,6 +1,8 @@
 package com.example.patryk.uniassistant;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Environment;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +11,14 @@ import android.view.View;
 import android.widget.TimePicker;
 import android.widget.DatePicker;
 import android.widget.EditText;
+
+import java.io.PrintWriter;
+import java.util.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.*;
+
+
 
 public class NewReminder extends AppCompatActivity {
 
@@ -31,23 +41,48 @@ public class NewReminder extends AppCompatActivity {
                     public void onClick(View v){
                         setContentView(R.layout.activity_new_reminder);
 
-
                         String Title = title.getText().toString();
 
-                        String Text = text.getText().toString();
+                        String Text =  text.getText().toString();
 
-                        String Date = date.getText().toString();
-
-                        Intent intent = new Intent(NewReminder.this, Reminder.class);
-                        intent.putExtra("Title", Title);
-                        intent.putExtra("Text", Text);
-                        intent.putExtra("Date", Date);
-
-                        Reminder x = new Reminder();
-                        x.getReminderTitle();
+                        String TimeDate = time + " " + date.getText().toString();
 
 
-                        startActivity(new Intent(NewReminder.this, MainActivity.class));
+                        try{
+                            File F = new File(getFilesDir(),"remList.txt");
+                            System.out.println(getFilesDir());
+
+                            FileWriter W = new FileWriter(F,false);
+                            BufferedWriter B = new BufferedWriter(W);
+
+                            FileReader R = new FileReader(F);
+                            BufferedReader BR = new BufferedReader(R);
+                            String thisLine;
+                            int ID = 1;
+                            while((thisLine = BR.readLine())!=null){
+                                ID+=1;
+                            }
+
+                            B.write(ID + "\n" + Title + "\n" + Text + "\n" + TimeDate + "\n");
+                            B.close();W.close();
+
+
+
+
+
+
+                        }
+                        catch(Exception e){
+                            System.out.println("File Empty");
+                        }
+
+
+
+                        //Reminder x = new Reminder();
+                        //x.getReminderTitle();
+
+                        //startActivity(new Intent(NewReminder.this, MainActivity.class));
+
                     }
                 }
         );
@@ -63,6 +98,7 @@ public class NewReminder extends AppCompatActivity {
     public void showTimePickerDialog(View v) {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
+
     }
 
 

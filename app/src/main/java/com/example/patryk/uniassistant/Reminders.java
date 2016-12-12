@@ -31,5 +31,14 @@ public class Reminders extends AppCompatActivity {
                 }
         );
 
+        Button Show_Reminders_Button = (Button) findViewById(R.id.Show_Reminders_Button);
+        Show_Reminders_Button.setOnClickListener(
+                new Button.OnClickListener(){
+                    public void onClick(View v){
+                        startActivity(new Intent(Reminders.this, ShowReminders.class));
+                    }
+                }
+        );
+
     }
 }

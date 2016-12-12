@@ -8,10 +8,10 @@ import android.widget.EditText;
 
 public class Reminder extends NewReminder {
 
-    private String reminderTitle;
-    private String reminderText;
-    private String reminderTime;
-    private String reminderDate;
+    public String reminderTitle;
+    public String reminderText;
+    public String reminderTime;
+    public String reminderDate;
 
     NewReminder rem = new NewReminder();
 
@@ -24,26 +24,7 @@ public class Reminder extends NewReminder {
 
     }*/
 
-    public String getReminderTitle(){
-        Bundle extras = getIntent().getExtras();
-        String Title = extras.getString("Title");
-        System.out.println(Title);
-        return extras.getString("Title");
-    }
 
-    public String getReminderText(){
-
-        return "a";
-    }
-
-    public String getReminderTime(){
-        return "a";
-    }
-
-    public String getReminderDate(){
-        //String Date = rem.getDate();
-        return "a";
-    }
 
 
 
